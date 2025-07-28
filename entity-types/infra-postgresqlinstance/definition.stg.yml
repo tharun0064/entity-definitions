@@ -25,7 +25,7 @@ synthesis:
           entityTagName: instrumentation.name
 
     - identifier: entityId
-      name: entityName
+      name: entityKey
       legacyFeatures:
         useNonStandardAttributes: true
         overrideGuidType: true
