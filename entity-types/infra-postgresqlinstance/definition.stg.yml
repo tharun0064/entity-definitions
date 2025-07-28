@@ -55,3 +55,4 @@ dashboardTemplates:
     template: newrelic_dashboard.json
   opentelemetry:
     template: opentelemetry_dashboard.stg.json
+

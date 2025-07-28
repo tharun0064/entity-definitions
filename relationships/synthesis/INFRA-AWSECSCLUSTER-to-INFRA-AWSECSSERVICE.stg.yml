@@ -1,26 +1,24 @@
 relationships:
-  - name: apmApplicationHostsOnAzureFunctionsApp
+  - name: awsEcsClusterHostsEcsService
     version: "1"
     origins:
-      - Azure Integration
+      - AWS Integration
     conditions:
       - attribute: eventType
         anyOf: [ "Metric" ]
       - attribute: entity.type
-        anyOf: [ "AZUREFUNCTIONSAPP" ]
-      - attribute: azure.resourceId
-        present: true
+        anyOf: [ "AWSECSSERVICE", "AWS_ECS_SERVICE" ]
     relationship:
       expires: P75M
       relationshipType: HOSTS
       source:
         lookupGuid:
-          candidateCategory: APMAPPLICATION
+          candidateCategory: AWSECSCLUSTER
           fields:
-            - field: resourceId
-              attribute: azure.resourceId
+            - field: awsEcsClusterArn
+              attribute: aws.ecs.ClusterName
       target:
         extractGuid:
           attribute: entity.guid
           entityType:
-            value: AZUREFUNCTIONSAPP
+            value: AWSECSSERVICE
