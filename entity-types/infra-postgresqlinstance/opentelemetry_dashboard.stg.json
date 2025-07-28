@@ -19,8 +19,7 @@
                         "nrqlQueries": [
                             {
                                 "query": "SELECT latest(postgresql.backends) as 'Connections', sum(postgresql.commits) as 'Commits', sum(postgresql.rollbacks) as 'Rollbacks', sum(postgresql.deadlocks) AS 'Deadlocks'  FROM Metric SINCE 6 months ago UNTIL now ",
-                                "accountId": 0
-                            }
+                                "accountId": 0}
                         ]
                     }
                 },
@@ -39,8 +38,7 @@
                         "nrqlQueries": [
                             {
                                 "query": "SELECT latest(postgresql.index.scans) as 'Scans', latest(postgresql.index.size) as 'Size' FROM Metric WHERE metricName LIKE 'postgresql.index%' FACET postgresql.index.name, postgresql.table.name LIMIT 50 SINCE 6 months ago UNTIL now",
-                                "accountId": 0
-                            }
+                                "accountId": 0}
                         ]
                     }
                 },
@@ -59,8 +57,7 @@
                         "nrqlQueries": [
                             {
                                 "query": "SELECT latest(postgresql.db_size) / 1024 / 1024 as 'Size (MB)' FROM Metric WHERE metricName = 'postgresql.db_size' FACET postgresql.database.name TIMESERIES AUTO SINCE 6 months ago UNTIL now ",
-                                "accountId": 0
-                            }
+                                "accountId": 0}
                         ]
                     }
                 }
