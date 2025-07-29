@@ -1,0 +1,25 @@
+[
+    {
+        "description": "The number of rows in the database.",
+        "endTimestamp": 1753772520000,
+        "instrumentation.provider": "opentelemetry",
+        "metricName": "postgresql.rows",
+        "newrelic.source": "api.metrics.otlp",
+        "nr.dataPointCount": 6,
+        "otel.library.name": "github.com/open-telemetry/opentelemetry-collector-contrib/receiver/postgresqlreceiver",
+        "otel.library.version": "0.129.0-dev",
+        "postgresql.database.name": "postgres",
+        "postgresql.rows": {
+            "type": "gauge",
+            "count": 6,
+            "sum": 6,
+            "min": 1,
+            "max": 1,
+            "latest": 1
+        },
+        "postgresql.table.name": "public.test_data",
+        "state": "dead",
+        "timestamp": 1753772460000,
+        "unit": "1"
+    }
+]

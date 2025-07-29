@@ -42,6 +42,10 @@ synthesis:
           ttl: P1D
         reportingAgent:
           ttl: P1D
+    
+  tags:
+    telemetry.sdk.name:
+      entityTagName: instrumentation.provider
 
 goldenTags:
 - postgres.host
